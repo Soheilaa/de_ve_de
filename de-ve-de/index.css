@@ -1,0 +1,154 @@
+body {
+    font-family: montserrat, arial, verdana;
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    height: 100%;
+}
+
+#search_container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.searchbar {
+ font-size: 1.2rem;
+  width: 18rem;
+  height: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  position: relative;
+  transition: all .2s;
+  transition-delay: .1s;
+}
+
+.searchbar:hover {
+    width: 25rem;
+    height: 1.5rem;
+}
+
+.button {
+    height: 2rem;
+    position: absolute;
+    top: 1.9rem;
+    right: 1rem;
+    transition: all .2s;
+    transition-delay: .1s;
+    padding: 1rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+#MovieForm_container {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 71px;
+    box-sizing: border-box;
+    width: 45%;
+    margin: 12px 25%;
+    position: relative;
+}
+
+.title {
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    padding-left: 9rem;
+}
+
+.form_input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#addMovieButton {
+    width: 100px;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 17px 73px;
+    margin: 4px 15%;
+}
+
+#displaybtn {
+    padding-top: 1rem;
+}
+
+#addMovieButton {
+    margin-top: 1rem;
+    width: 20rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Add your styling for watched, unwatched, and favorite buttons */
+.watched {
+    background:  rgba(196, 102, 0, 0.6);
+    background: linear-gradient(0deg,  rgba(196, 102, 0, 0.6) 0%,  rgba(155, 89, 182, 0.6) 100%);
+    border-radius: 5px;
+    width: 7rem;
+    height: 2rem;
+    font-weight: bold;
+    border: 1px solid white;
+    margin-left: 1rem;
+  }
+  .watched:hover {
+    background: rgba(155, 89, 182, 0.6);
+    background: linear-gradient(0deg, rgba(155, 89, 182, 0.6) 0%, rgba(196, 102, 0, 0.6) 100%);
+  }
+.unwatched {
+    background-color: rgb(255, 255, 255); /* Set the color you want for the watched state */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-left: 1rem;
+    border-radius: 5px;
+    width: 7rem;
+    height: 2rem;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.Delete {
+    background-color: rgb(255, 255, 255); /* Set the color you want for the watched state */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-left: 1rem;
+    border-radius: 5px;
+    width: 7rem;
+    height: 2rem;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+  

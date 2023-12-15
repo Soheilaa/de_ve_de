@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>De-VE-DE</title>
+</head>
+<body>
+
+<div id="search_container">
+    <input type="text" id="searchInput" placeholder="Search..." class="searchbar">
+    <img id="searchBtn" src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="Magnifying Glass" class="button">
+    <!-- <button id="searchBtn">Search</button> -->
+</div>
+<div id="MovieForm_container">
+<!-- Movie Form -->
+<h2 class="title">Add a Movie</h2>
+<form>
+    <!-- <label for="name">Name:</label> -->
+    <input class="form_input" type="text" id="name" placeholder="Movie Name" required><br>
+
+    <!-- <label for="genre">Genre:</label> -->
+    <input class="form_input" type="text" id="genre" placeholder="Genre" required><br>
+
+    <!-- <label for="releaseDate">Release Date:</label> -->
+    <input class="form_input" type="text" id="releaseDate" placeholder="Release Date" required><br>
+
+    <button id="addMovieButton" type="button">Add Movie</button>
+    <br>
+    <div id="displaybtn">
+        <button id="showAllMovies" type="button">Show All Movies</button>
+        <button id="showFavoritesButton" type="button">display Favorites</button>
+        <button id="showWatchedButton" type="button">display Watched Movies</button>
+        <button id="showUnwatchedButton" type="button">display Unwatched Movies</button>
+    </div>
+   </form>
+</div>
+   <!-- show the results -->
+   <ul id="favoritesList"></ul>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/movieFunctions.js"></script>
+<script type="module" src="js/buttonFunctions.js"></script>
+<script type="module" src="js/uiFunctions.js"></script>
+
+</body>
+</html>
