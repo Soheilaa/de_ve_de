@@ -6,11 +6,11 @@ import { updateWatchStatus } from './uiFunctions.js';
 // Function to add a movie to the favorites
 function addMovie() {
     const nameInput = document.getElementById('name');
-    const genreInput = document.getElementById('genre');
+    const genreSelect = document.getElementById('genre');
     const releaseDateInput = document.getElementById('releaseDate');
   
     const name = nameInput.value;
-    const genre = genreInput.value;
+    const genre = genreSelect.value;
     const releaseDate = releaseDateInput.value;
   
     // Check if a movie with the same title already exists
@@ -38,7 +38,7 @@ function addMovie() {
   
         // Reset input fields after successfully adding a movie
         nameInput.value = '';
-        genreInput.value = '';
+        genreSelect.value = '';
         releaseDateInput.value = '';
       })
       .catch((error) => {
@@ -73,6 +73,7 @@ function displayAllMovies() {
         listItem.appendChild(watchedButton);
         listItem.appendChild(unwatchedButton);
         listItem.appendChild(favoriteButton);
+        
   
         // Create a delete button
         const deleteButton = createButton('Delete', () => deleteMovie(doc.id));

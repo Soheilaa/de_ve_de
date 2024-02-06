@@ -16,24 +16,33 @@
 </div>
 <div id="MovieForm_container">
 <!-- Movie Form -->
-<h2 class="title">Add a Movie</h2>
+<h2 class="title movieform_place">Add a Movie</h2>
 <form>
     <!-- <label for="name">Name:</label> -->
     <input class="form_input" type="text" id="name" placeholder="Movie Name" required><br>
 
     <!-- <label for="genre">Genre:</label> -->
-    <input class="form_input" type="text" id="genre" placeholder="Genre" required><br>
+    <!-- <input class="form_input" type="text" id="genre" placeholder="Genre" required><br> -->
+    <label for="genre" id="form_label">Select a Genre:</label>
+        <select class="form_input" id="genre" required>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="Romance">Romance</option>
+        </select>
+ 
 
     <!-- <label for="releaseDate">Release Date:</label> -->
-    <input class="form_input" type="text" id="releaseDate" placeholder="Release Date" required><br>
+    <input class="form_input" type="date" id="releaseDate" placeholder="Release Date" required><br>
 
-    <button id="addMovieButton" type="button">Add Movie</button>
+    <button id="addMovieButton" class="movieform_place" type="button">Add Movie</button>
     <br>
     <div id="displaybtn">
-        <button id="showAllMovies" type="button">Show All Movies</button>
-        <button id="showFavoritesButton" type="button">display Favorites</button>
-        <button id="showWatchedButton" type="button">display Watched Movies</button>
-        <button id="showUnwatchedButton" type="button">display Unwatched Movies</button>
+        <button class="filter_buttons movieform_place" id="showAllMovies" type="button">Show All Movies</button>
+        <button class="filter_buttons movieform_place" id="showFavoritesButton" type="button">display Favorites</button>
+        <button class="filter_buttons movieform_place" id="showWatchedButton" type="button">display Watched Movies</button>
+        <button class="filter_buttons movieform_place" id="showUnwatchedButton" type="button">display Unwatched Movies</button>
     </div>
    </form>
 </div>

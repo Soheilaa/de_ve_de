@@ -60,8 +60,13 @@ body {
     font-size: 21px;
     text-transform: uppercase;
     color: #2C3E50;
-    margin-bottom: 10px;
-    padding-left: 9rem;
+}
+
+#form_label {
+    font-size: 16px;
+    color: #2C3E50;
+    padding-bottom: 9px;
+    font-family:sans-serif;
 }
 
 .form_input {
@@ -74,20 +79,32 @@ body {
     font-family: montserrat;
     color: #2C3E50;
     font-size: 13px;
+    background-color: white;
 }
 
 #addMovieButton {
-    width: 100px;
     background: #27AE60;
     font-weight: bold;
     color: white;
     border: 0 none;
-    border-radius: 1px;
-    cursor: pointer;
+    border-radius: 6px;
     padding: 10px;
-    margin: 10px 5px;
-    text-decoration: none;
     font-size: 14px;
+    width: 100%;
+
+}
+
+.movieform_place {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.filter_buttons {
+    padding: 10px;
+    background: linear-gradient(0deg, rgb(39, 174, 96) 0%, rgb(215, 215, 215) 100%);
+    border-radius: 19px;
+    font-size: 11px;
+    border: 3px solid white;
 }
 
 ul li {
@@ -98,12 +115,9 @@ ul li {
 
 #displaybtn {
     padding-top: 1rem;
+    display: flex;
 }
 
-#addMovieButton {
-    margin-top: 1rem;
-    width: 20rem;
-}
 
 form {
     display: flex;
@@ -113,7 +127,7 @@ form {
 }
 
 /* Add your styling for watched, unwatched, and favorite buttons */
-.watched {
+.watched, .delete {
     background:  rgba(196, 102, 0, 0.6);
     background: linear-gradient(0deg,  rgba(196, 102, 0, 0.6) 0%,  rgba(155, 89, 182, 0.6) 100%);
     border-radius: 5px;
@@ -151,4 +165,18 @@ form {
     border: 1px solid white;
 }
 
-  
+#favoritesList {
+    background-color: white;
+    width: 100%;
+}
+
+@media screen and (max-width: 626px) {
+    .title {
+        font-size: 13px;
+    }
+    
+    #displaybtn {
+        display: flex;
+        flex-direction: column;
+    }
+}
