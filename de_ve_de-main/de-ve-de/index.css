@@ -1,0 +1,364 @@
+
+body {
+    font-family: 'Montserrat', Arial, Verdana;
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    margin: 0;
+    padding: 0;
+}
+
+#search_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar {
+    font-size: 1.2rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    padding: 1rem 3rem 1rem 1.5rem;
+    transition: all .2s;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+#MovieForm_container {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 600px;
+    margin: 12px auto;
+}
+
+.title,
+#form_label {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.form_input {
+    padding: 10px; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: calc(100% - 20px); /* Adjusted width to account for padding */
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #2C3E50;
+    font-size: 14px; /* Adjusted font size */
+    background-color: white;
+}
+
+#addMovieButton {
+    background: RGB(50, 50, 50);
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    font-family: 'Montserrat';
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%; /* Full width button */
+    margin-top: 10px; /* Added margin for spacing */
+}
+
+.movieform_place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter_buttons {
+    padding: 12px; /* Increased padding for larger touch area */
+    background: rgb(218, 162, 105);
+    border-radius: 10px;
+    font-size: 14px; /* Increased font size for better readability */
+    border: 3px solid white;
+    font-family: 'Montserrat';
+    margin: 5px; 
+    color: white;
+    font-weight: 600;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 17px 73px;
+    margin: 4px 15%;
+}
+
+#displaybtn {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around; /* Space out buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap in smaller screens */
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.watched ,.unwatched, .favorite, .delete-button  {
+    background: rgba(196, 102, 0, 0.6);
+    background: linear-gradient(0deg, rgba(231, 140, 43, 0.6) 0%, rgba(131, 92, 146, 0.6) 100%);
+    border-radius: 5px;
+    width: 6rem;
+    height: 2rem;
+    font-weight: bold;
+    border: 1px solid white;
+    margin-left: 1rem;
+    color: white;
+    font-family: 'Montserrat', Arial, Verdana;
+}
+
+.button-small:hover {
+    background-color: #f0f0f0;
+}
+
+.delete-button {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #search_container {
+        padding: 0.5rem;
+    }
+
+    .search-wrapper {
+        width: 90%;
+    }
+
+    .searchbar {
+        font-size: 1rem;
+        padding: 0.75rem 2rem 0.75rem 0.75rem;
+    }
+
+    .button {
+        height: 1.2rem;
+        right: 0.5rem;
+    }
+
+    #MovieForm_container {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .form_input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    #addMovieButton {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .filter_buttons {
+        font-size: 12px; /* Adjusted font size */
+        padding: 10px; /* Adjusted padding */
+    }
+
+    ul li {
+        padding: 12px 50px;
+        margin: 2px 10%;
+    }
+}
+
+#monthSelect,
+#yearSelect {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#monthSelect.active,
+#yearSelect.active {
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+
+    .search-wrapper {
+        width: 80%;
+    }
+
+    .searchbar {
+        font-size: 0.9rem;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+    }
+
+    .button {
+        height: 1rem;
+        right: 0.5rem;
+    }
+
+    #MovieForm_container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .form_input {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    #addMovieButton {
+        font-family: 'Montserrat', Arial, Verdana;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .filter_buttons {
+        font-size: 13px;
+        font-family: 'Montserrat', Arial, Verdana;
+        color: white;
+        font-weight: 500;
+        padding: 8px; /* Adjusted padding */
+    }
+
+    #displaybtn {
+        flex-direction: column;
+    }
+
+    .delete-button {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        align-items: center;
+        margin-left: 1px;
+    }
+
+    ul li button {
+        font-size: 10px;
+        background: rgba(196, 102, 0, 0.6);
+        background: linear-gradient(0deg, rgba(231, 140, 43, 0.6) 0%, rgba(131, 92, 146, 0.6) 100%);
+        border-radius: 5px;
+        height: 2rem;
+        font-weight: bold;
+        border: 1px solid white;
+        margin-left: 3px;
+        color: white;
+        font-family: 'Montserrat', Arial, Verdana;
+    }
+
+    ul li button:last-child {
+        background-color: lightcoral;
+        border: 1px solid white;
+        border-radius: 9px;
+        padding: 10px;
+        margin-left: 5px;
+        font-weight: bolder;
+        color: white;
+    }
+
+}
+
+#container {
+    text-align: center;
+}
+
+.form_input {
+    padding: 10px;
+    font-size: 16px;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+/* Calendar popup styling */
+.calendar-popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.calendar-header span {
+    cursor: pointer;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+.watched-status .fa-eye,
+.delete-button,
+.movie-title,
+.watched-text,
+.movie-date {
+    display: none;
+}
+

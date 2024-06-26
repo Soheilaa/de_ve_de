@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>De-VE-DE</title>
+</head>
+<body>
+    <div id="search_container">
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search..." class="searchbar">
+            <img id="searchBtn" src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="Magnifying Glass" class="button">
+        </div>
+    </div>
+
+    <div id="MovieForm_container">
+        <h2 class="title movieform_place">Add a Movie</h2>
+        <form id="movieForm">
+            <input class="form_input" type="text" id="name" placeholder="Movie Name" required><br>
+            <label for="genre" id="form_label" class="title">Select a Genre:</label>
+            <select class="form_input" id="genre" required>
+                <option value="">Select a Genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="romance">Romance</option>
+            </select>            
+            <div id="container">
+                <label id="form_label" class="title">Select a Date:</label>
+                <input class="form_input" type="text" id="releaseDate" placeholder="Release Date" required>
+                <div id="calendarPopup" class="calendar-popup">
+                    <div class="calendar-header">
+                        <span id="prevMonth">&lt;</span>
+                        <span id="currentMonth">
+                            <span id="monthSelect"></span>
+                            <span id="yearSelect"></span>
+                        </span>
+                        <span id="nextMonth">&gt;</span>
+                    </div>
+                    <div id="calendarBody" class="calendar"></div>
+                </div>
+            </div>
+            
+            <button id="addMovieButton" class="movieform_place" type="button">Add Movie</button>
+            <br>
+            <div id="displaybtn">
+                <button class="filter_buttons movieform_place" id="showAllMovies" type="button">Show All Movies</button>
+                <button class="filter_buttons movieform_place" id="showFavoritesButton" type="button">Display Favorites</button>
+                <button class="filter_buttons movieform_place" id="showWatchedButton" type="button">Display Watched Movies</button>
+                <button class="filter_buttons movieform_place" id="showUnwatchedButton" type="button">Display Unwatched Movies</button>
+            </div>
+        </form>
+    </div>
+
+    <ul id="favoritesList">
+        <li>
+            <span class="movie-title">Movie Title</span>
+            <span class="movie-date">2023-01-01</span>
+            <span class="watched-status">
+                <span class="watched-text">Watched</span>
+                <i class="fa fa-eye"></i>
+            </span>
+            <button class="delete-button">Delete</button>
+        </li>
+    </ul>    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/movieFunctions.js"></script>
+    <script type="module" src="js/uiFunctions.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
